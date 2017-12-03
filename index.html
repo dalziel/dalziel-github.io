@@ -1,0 +1,204 @@
+<html>
+<head>
+    
+    <!-- FONTS (NEEDED FOR SEARCH ICON) -->
+    <script src="https://use.fontawesome.com/54c0074763.js"></script>
+    
+    <!-- BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <!-- JQUERY JS-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    
+    <!-- TETHER JS (BOOTSTRAP DEPENDENCY) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS-->      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <!-- DATATABLES JS (MUST BE LOADED AFTER JQUERY--> 
+    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- CUSTOM CSS--> 
+    <style>
+    
+        .theme-color-background {
+        background-color: #66023C /* Tyrian Purple */  
+        }
+        
+        .card-header {
+        margin-bottom: 1rem;
+        }
+
+        #dataTable_info {
+        margin: 1rem;
+        }
+
+    </style>   
+    <!-- END OF CUSTOM CSS--> 
+    
+</head>
+      
+<body>
+    
+    <div id="container">
+
+      <div id="content">
+
+          <main role="main" class = "container">
+  
+            <div class="card mb-3">
+                <div class="card-header theme-color-background">
+                    <!--i class="fa fa-table"></i--> <strong class = "text-white">SCHOOL SEARCH</strong></div>
+                    <div class="card-body">
+                        
+                        
+                        
+                        
+                        <label class = "ml-3"><strong>Coed status:</strong></label>
+                        
+                        <fieldset class="form-group ml-3">
+                            
+                            <div class="form-check form-check-inline">
+                            
+                        
+                        
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked> Boys
+                          </label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked> Girls
+                          </label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline disabled">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked> Coed
+                          </label>
+                        </div>
+                                
+                                 </div>
+                            
+                        </fieldset>
+                        
+                        
+                        
+                    <label class = "ml-3"><strong>Search by name:</strong></label>
+                                    
+            <!-- Note: Datatables search box is disabled; search box below uses the Datatables search API -->
+                            <div class="input-group col-md-4 mb-3">
+                                <input class="form-control rounded-0 py-2" type="search" value="" id="myInputTextField">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                            </div>
+                  
+            
+            
+            
+            
+            
+            
+          <div class="table-responsive table-striped">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>School</th>
+                  <th>State</th>
+                  <th>Coed</th>
+                  <th>Religion</th>
+                  <th>Enrollment</th>
+                  <th>Boarding Percent</th>
+                </tr>
+              </thead>
+              <!--tfoot>
+                <tr>
+                  <th>School</th>
+                  <th>State</th>
+                  <th>Coed</th>
+                  <th>Religion</th>
+                  <th>Enrollment</th>
+                  <th>Boarding Percent</th>
+                </tr>
+              </tfoot-->
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Sources: xxx</div>
+      </div>
+    
+
+          </main> 
+    
+    
+    
+
+    
+    <script>
+            
+        
+
+        
+          $("#dataTable").dataTable({
+          "data":[
+            ["Asheville School","NC","Coed","None","290","73%"],
+            ["Avon Old Farms School","CT","Boys","None","405","75%"],
+            ["Baylor School","TN","Coed","None","1053","18%"],
+            ["Berkshire School","MA","Coed","None","397","92%"],
+            ["Blair Academy","NJ","Coed","Presbyterian","462","78%"],
+            ["Brewster Academy","NH","Coed","None","352","81%"],
+            ["Brooks School","MA","Coed","None","378","65%"],
+            ["Cate School","CA","Coed","None","280","80%"],
+            ["Cheshire Academy","CT","Coed","None","437","59%"],
+            ["Choate Rosemary Hall","CT","Coed","None","862","74%"],
+            ["Concord Academy","MA","Coed","None","381","42%"],
+            ["Cranbrook Schools","MI","Coed","None","814","31%"],
+            ["Culver Academies","IN","Coed","None","814","92%"]
+          ],
+              "paging": false,
+              "dom":'<"top"l>rt<"bottom"ip><"clear">'
+        }); 
+        
+        $(document).ready(() => {
+            const $dataTable1 = $('#dataTable')
+            $dataTable1.show()
+        });
+        
+        
+        oTable = $('#dataTable').DataTable();   
+        $('#myInputTextField').keyup(function(){
+      oTable.search($(this).val()).draw() ;
+        })
+
+        
+        
+    </script>  
+    
+ 
+          <!-- Footer --> 
+    <div class="container"> 
+        <footer class="blog-footer">
+            <p>
+            &copy; 2017 The Harkness Review
+            </p>
+      </footer>
+      </div>
+    
+    
+
+   </div>
+          
+          </div>
+
+</body>
+    
+    
+</html>
