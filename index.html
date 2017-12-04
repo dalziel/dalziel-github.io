@@ -22,12 +22,12 @@
     <!-- CUSTOM CSS--> 
     <style>
     
-        .theme-color-background {
+        .bg-purple {
         background-color: #66023C /* Tyrian Purple */  
         }
         
-        .theme-color-border {
-        background-color: #66023C /* Tyrian Purple */ 
+        .text-purple {
+        color: #66023C /* Tyrian Purple */ 
         }
         
         .card-header {
@@ -38,9 +38,9 @@
         margin: 1rem;
         }
         
-        .card {
-        border-width: 5px;
-        }
+        .card {border-width: 5px}
+        
+        { text-decoration: none !important}
 
     </style>   
     <!-- END OF CUSTOM CSS--> 
@@ -80,161 +80,197 @@
 
         <main role="main" class = "container">
               
-          <div class="container py-3 theme-color-border">
-            <div class="card ">
-              <div class="row ">
-                <div class="col-md-4">
-                    <img src="T_Emma-Willard.jpg" class="w-100">
-                  </div>
-                  <div class="col-md-8 px-3">
-                    <div class="card-block px-3">
-                      <h1 class="jumbotron-heading">Welcome to the Harkness Review!</h1>
-                        <div class = "lead">
-                        <p>There are a large number of excellent schools.</p>  
-                            <ul> 
-                                <li>Which schools should you consider? </li>
-                                <li> Which is ultimately the best fit for your child? </li>
-                                <li> What’s involved in the application process?  </li>
-                            </ul>
-                        <p>The Harkness Review will help you to answer these questions. </p>
-                        </div>
-                    </div>
-                  </div>
+          <div class="container py-3">
+        
+            
 
-                </div>
-              </div>
+            
+                   <h1 class="text-purple">
+                      <i class="indicator fa fa-university" aria-hidden="true"></i>
+                       The Harkness Review
+                    </h1>
+                        <div class = "lead">
+                        <h2 class="text-muted">Find schools that fit the needs of your family.</h2>      
+                        </div>
+                
+              
+
             </div>
   
-            <div class="card mb-3 mt-3">
-                <div class="card-header theme-color-background">
-                    <!--i class="fa fa-table"></i--> <strong class = "text-white">SCHOOL SEARCH</strong></div>
-                    <div class="card-body">
-                        
-                        <label class = "ml-3"><strong>School Type:</strong></label>
-                        
-                        <fieldset class="form-group ml-3">
-                            
-                            <div class="form-check form-check-inline">
-                            
-                                <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked disabled> Boarding
-                                  </label>
-                                </div>
-                        
-                                <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" disabled> Day
-                                  </label>
-                                </div>
-                                
-                            </div>
-                            
-                        </fieldset>
+            
                         
                         
                         
-                    <label class = "ml-3"><strong>Search by name:</strong></label>
-                                    
-            <!-- Note: Datatables search box is disabled; search box below uses the Datatables search API -->
-                            <div class="input-group col-md-4 mb-3">
-                                <input class="form-control rounded-0 py-2" type="search" value="" id="myInputTextField">
-                                    <span class="input-group-btn">
-                                        <button onclick="myFunction()" class="btn btn-outline-secondary" type="button">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                            </div>
-                  
-            
-            
-            
-            
-            
-            
-          <div class="table-responsive table-striped">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                <tr>
-                  <th>School</th>
-                  <th>State</th>
-                  <th>Coed</th>
-                  <th>Religion</th>
-                  <th>Enrollment</th>
-                  <th>Boarding Percent</th>
-                </tr>
-              </thead>
-              <!--tfoot>
-                <tr>
-                  <th>School</th>
-                  <th>State</th>
-                  <th>Coed</th>
-                  <th>Religion</th>
-                  <th>Enrollment</th>
-                  <th>Boarding Percent</th>
-                </tr>
-              </tfoot-->
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-        </div>
+          <div class="row">    
     
+    <div class="col">
+    
+  <div class="card">
+    <div class="card-header mb-0  bg-purple" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a class = "collapsed text-white" data-toggle="collapse" href="#collapseOne" ><i class="indicator fa fa-caret-down" aria-hidden="true"></i>
+          Boarding / Day
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+          
+    
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+										Boarding schools (>80%)
+									</label>
+								</div>
+						
+								<div class="checkbox" >
+									<label>
+										<input type="checkbox" value="">
+										Boarding / Day Schools
+									</label>
+								</div>
+					
+								<div class="checkbox"  >
+									<label>
+										<input type="checkbox" value="">
+										Day schools (>80%)
+									</label>
+								</div>
+		
+          
       </div>
-    
-
-          </main> 
-    
-    
-    
-
-    
-    <script>
+    </div>
+  </div>
+      
+      </div>
+        <div class="col">
+      
+  <div class="card">
+    <div class="card-header mb-0 bg-purple" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed text-white" data-toggle="collapse" href="#collapseTwo"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>
+          Type of school
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse show" role="tabpanel">
+      <div class="card-block">
+          
+          <div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+										Coed
+									</label>
+								</div>
+						
+								<div class="checkbox" >
+									<label>
+										<input type="checkbox" value="">
+										Girls
+									</label>
+								</div>
+					
+								<div class="checkbox"  >
+									<label>
+										<input type="checkbox" value="">
+										Boys
+									</label>
+								</div>
+        
+      </div>
+    </div>
+  </div>
             
-        
-
-        
-          $("#dataTable").dataTable({
-          "data":[
-            ["Asheville School","NC","Coed","None","290","73%"],
-            ["Avon Old Farms School","CT","Boys","None","405","75%"],
-            ["Baylor School","TN","Coed","None","1053","18%"],
-            ["Berkshire School","MA","Coed","None","397","92%"],
-            ["Blair Academy","NJ","Coed","Presbyterian","462","78%"],
-            ["Brewster Academy","NH","Coed","None","352","81%"],
-            ["Brooks School","MA","Coed","None","378","65%"],
-            ["Cate School","CA","Coed","None","280","80%"],
-            ["Cheshire Academy","CT","Coed","None","437","59%"],
-            ["Choate Rosemary Hall","CT","Coed","None","862","74%"],
-            ["Concord Academy","MA","Coed","None","381","42%"],
-            ["Cranbrook Schools","MI","Coed","None","814","31%"],
-            ["Culver Academies","IN","Coed","None","814","92%"]
-          ],
-              "paging": false,
-              "dom":'<"top"l>rt<"clear">'
-              // "dom":'<"top"l>rt<"bottom"ip><"clear">'
-        }); 
-        
-        $(document).ready(() => {
-            const $dataTable1 = $('#dataTable')
-            $dataTable1.hide()
-        });
-        
-        
-        oTable = $('#dataTable').DataTable();   
-        $('#myInputTextField').keyup(function(){
-      oTable.search($(this).val()).draw() ;
-        })
-        
-        function myFunction() {
-    console.log("Clicked search button");
-            const $dataTable1 = $('#dataTable')
-            $dataTable1.show()
-}
-        
-        
-    </script>  
+              </div>
+        <div class="col">
+            
+  <div class="card">
+    <div class="card-header mb-0 bg-purple" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed text-white" data-toggle="collapse" href="#collapseThree"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>
+          Location
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse show" role="tabpanel">
+      <div class="card-block">
+          
+          
+          <div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+										North-East U.S.
+									</label>
+								</div>
+						
+								<div class="checkbox" >
+									<label>
+										<input type="checkbox" value="">
+										West Coast U.S.
+									</label>
+								</div>
+					
+								<div class="checkbox"  >
+									<label>
+										<input type="checkbox" value="">
+										Other locations
+									</label>
+								</div>
+     
+      </div>
+    </div>
+  </div>
+</div>
     
+            <div class="col">
+            
+  <div class="card">
+    <div class="card-header mb-0 bg-purple" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed text-white" data-toggle="collapse" href="#collapseFour"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>
+          School size
+        </a>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse show" role="tabpanel">
+      <div class="card-block">
+          
+          
+          <div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+										Small
+									</label>
+								</div>
+						
+								<div class="checkbox" >
+									<label>
+										<input type="checkbox" value="">
+										Medium
+									</label>
+								</div>
+					
+								<div class="checkbox"  >
+									<label>
+										<input type="checkbox" value="">
+										Large
+									</label>
+								</div>
+     
+      </div>
+    </div>
+  </div>
+</div>
+        
+         </div>              
+                        
+                        
+      
+                     <button onclick="myFunction()" type="button" class="btn bg-purple text-white mt-4 mb-4 btn-lg btn-block"><i class="fa fa-search"></i> Search for schools (currently in development)</button>               
+    
+          
  
           <!-- Footer --> 
     <div class="container"> 
