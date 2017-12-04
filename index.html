@@ -26,12 +26,20 @@
         background-color: #66023C /* Tyrian Purple */  
         }
         
+        .theme-color-border {
+        background-color: #66023C /* Tyrian Purple */ 
+        }
+        
         .card-header {
         margin-bottom: 1rem;
         }
 
         #dataTable_info {
         margin: 1rem;
+        }
+        
+        .card {
+        border-width: 5px;
         }
 
     </style>   
@@ -41,47 +49,86 @@
       
 <body>
     
+    <div class="container"> 
+        <nav class="navbar navbar-toggleable-md navbar-light bg-light rounded">
+            <!--a class="navbar-brand" href="/">THE HARKNESS REVIEW</a-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+            
+                  <li class="nav-item active">
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                  </li>
+          
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="datatable-test2.html">Search Schools</a>
+                  </li>
+
+                </ul>
+            </div>
+            
+        </nav>
+    </div>   
+    
     <div id="container">
 
       <div id="content">
 
-          <main role="main" class = "container">
+        <main role="main" class = "container">
+              
+          <div class="container py-3 theme-color-border">
+            <div class="card ">
+              <div class="row ">
+                <div class="col-md-4">
+                    <img src="T_Emma-Willard.jpg" class="w-100">
+                  </div>
+                  <div class="col-md-8 px-3">
+                    <div class="card-block px-3">
+                      <h1 class="jumbotron-heading">Welcome to the Harkness Review!</h1>
+                        <div class = "lead">
+                        <p>There are a large number of excellent schools.</p>  
+                            <ul> 
+                                <li>Which schools should you consider? </li>
+                                <li> Which is ultimately the best fit for your child? </li>
+                                <li> What’s involved in the application process?  </li>
+                            </ul>
+                        <p>The Harkness Review will help you to answer these questions. </p>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
   
-            <div class="card mb-3">
+            <div class="card mb-3 mt-3">
                 <div class="card-header theme-color-background">
                     <!--i class="fa fa-table"></i--> <strong class = "text-white">SCHOOL SEARCH</strong></div>
                     <div class="card-body">
                         
-                        
-                        
-                        
-                        <label class = "ml-3"><strong>Coed status:</strong></label>
+                        <label class = "ml-3"><strong>School Type:</strong></label>
                         
                         <fieldset class="form-group ml-3">
                             
                             <div class="form-check form-check-inline">
                             
+                                <div class="form-check form-check-inline">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked disabled> Boarding
+                                  </label>
+                                </div>
                         
-                        
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked> Boys
-                          </label>
-                        </div>
-                        
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked> Girls
-                          </label>
-                        </div>
-                        
-                        <div class="form-check form-check-inline disabled">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked> Coed
-                          </label>
-                        </div>
+                                <div class="form-check form-check-inline">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" disabled> Day
+                                  </label>
+                                </div>
                                 
-                                 </div>
+                            </div>
                             
                         </fieldset>
                         
@@ -93,7 +140,7 @@
                             <div class="input-group col-md-4 mb-3">
                                 <input class="form-control rounded-0 py-2" type="search" value="" id="myInputTextField">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-outline-secondary" type="button">
+                                        <button onclick="myFunction()" class="btn btn-outline-secondary" type="button">
                                             <i class="fa fa-search"></i>
                                         </button>
                                     </span>
@@ -132,7 +179,7 @@
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Sources: xxx</div>
+    
       </div>
     
 
@@ -164,12 +211,13 @@
             ["Culver Academies","IN","Coed","None","814","92%"]
           ],
               "paging": false,
-              "dom":'<"top"l>rt<"bottom"ip><"clear">'
+              "dom":'<"top"l>rt<"clear">'
+              // "dom":'<"top"l>rt<"bottom"ip><"clear">'
         }); 
         
         $(document).ready(() => {
             const $dataTable1 = $('#dataTable')
-            $dataTable1.show()
+            $dataTable1.hide()
         });
         
         
@@ -177,7 +225,12 @@
         $('#myInputTextField').keyup(function(){
       oTable.search($(this).val()).draw() ;
         })
-
+        
+        function myFunction() {
+    console.log("Clicked search button");
+            const $dataTable1 = $('#dataTable')
+            $dataTable1.show()
+}
         
         
     </script>  
