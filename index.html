@@ -28,25 +28,16 @@
     <!-- CUSTOM CSS--> 
     <style>
     
-        .bg-purple {
-        background-color: #66023C /* Tyrian Purple */  
-        }
-        
-        .text-purple {
-        color: #66023C /* Tyrian Purple */ 
-        }
-        
-        .card-header {
-        margin-bottom: 1rem;
-        }
-
-        #dataTable_info {
-        margin: 1rem;
-        }
-        
+        .bg-purple {background-color: #7B1842} 
+        .bg-royalblue {background-color: #E7F3FF}  
+        .text-purple {color: #7B1842} /* Tyrian Purple */ 
+        .card-header {margin-bottom: 1rem}
+        #dataTable_info {margin: 1rem}
         .card {border-width: 5px}
-        
         { text-decoration: none !important}
+        @media screen and (min-width:767px){.narrow-results{display:block}}
+        @media screen and (max-width:766px){.narrow-results{display:none}}
+        
 
     </style>   
     <!-- END OF CUSTOM CSS--> 
@@ -58,7 +49,7 @@
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
             <div class = "container">
-            <!--a class="navbar-brand" href="/">THE HARKNESS REVIEW</a-->
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -94,7 +85,7 @@
             
         <h1 class="text-purple">
             <i class="indicator fa fa-university" aria-hidden="true"></i>
-            The Harkness Review
+            Harkness Review
         </h1>
             <div class = "lead">
             <h2 class="text-muted">Find schools that fit the needs of your family.</h2>  
@@ -106,7 +97,7 @@
        
       
         
-        <div class = "card-deck mt-5 mb-5">  
+        <div class = "card-deck mt-5 mb-0">  
     
  
         
@@ -114,15 +105,15 @@
         
     
   <div class="card mb-4">
-    <div class="card-header mb-0  bg-purple" role="tab" id="headingOne">
+    <div class="card-header mb-0  bg-royalblue" role="tab" id="headingOne">
       <h5 class="mb-0">
-        <a class = "collapsed text-white" data-toggle="collapse" href="#collapseOne" ><i class="indicator fa fa-caret-down hidden-sm-up" aria-hidden="true"></i>
+        <a class = "collapsed text-muted" data-toggle="collapse" href="#collapseOne" ><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
           Boarding / Day
         </a>
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" class="narrow-results collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-block">
           
     
@@ -156,14 +147,14 @@
         <div class="col"-->
    <div class="w-100 d-md-none d-lg-none d-xl-none d-"></div>   
   <div class="card mb-4">
-    <div class="card-header mb-0 bg-purple" role="tab" id="headingTwo">
+    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingTwo">
       <h5 class="mb-0">
-        <a class="collapsed text-white" data-toggle="collapse" href="#collapseTwo"><i class="indicator fa fa-caret-down hidden-sm-up" aria-hidden="true"></i>
+        <a class="collapsed text-muted" data-toggle="collapse" href="#collapseTwo"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
           Type of school
         </a>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse show" role="tabpanel">
+    <div id="collapseTwo" class="narrow-results collapse" role="tabpanel">
       <div class="card-block">
           
           <div class="checkbox ml-3 mt-2">
@@ -195,14 +186,14 @@
         <div class="col"-->
   <div class="w-100 d-lg-none d-xl-none"></div>          
   <div class="card mb-4">
-    <div class="card-header mb-0 bg-purple" role="tab" id="headingThree">
+    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingThree">
       <h5 class="mb-0">
-        <a class="collapsed text-white" data-toggle="collapse" href="#collapseThree"><i class="indicator fa fa-caret-down hidden-sm-up" aria-hidden="true"></i>
+        <a class="collapsed text-muted" data-toggle="collapse" href="#collapseThree"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
           Location
         </a>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse show" role="tabpanel">
+    <div id="collapseThree" class="narrow-results collapse" role="tabpanel">
       <div class="card-block">
           
           
@@ -240,14 +231,14 @@
             
     <div class="w-100 d-md-none d-lg-none d-xl-none"></div>           
   <div class="card mb-4">
-    <div class="card-header mb-0 bg-purple" role="tab" id="headingThree">
+    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingThree">
       <h5 class="mb-0">
-        <a class="collapsed text-white" data-toggle="collapse" href="#collapseFour"><i class="indicator fa fa-caret-down hidden-sm-up" aria-hidden="true"></i>
+        <a class="collapsed text-muted" data-toggle="collapse" href="#collapseFour"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
           School size
         </a>
       </h5>
     </div>
-    <div id="collapseFour" class="collapse show" role="tabpanel">
+    <div id="collapseFour" class="narrow-results collapse" role="tabpanel">
       <div class="card-block">
           
           
@@ -282,7 +273,7 @@
                         
                         
       
-                     <button onclick="myFunction()" type="button" class="btn bg-purple text-white mt-4 mb-4 btn-lg btn-block"><i class="fa fa-search"></i> Search for schools (currently in development)</button>               
+                     <button onclick="myFunction()" type="button" class="btn bg-purple text-white mt-4 mb-4 btn-lg btn-block"><i class="fa fa-search"></i> Search for schools</button>               
     
           
  
