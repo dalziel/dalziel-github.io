@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -24,109 +24,67 @@
     
     <!-- DATATABLES JS (MUST BE LOADED AFTER JQUERY--> 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-    <!-- CUSTOM CSS--> 
-    <style>
-    
-        .bg-purple {background-color: #7B1842} 
-        .bg-royalblue {background-color: #E7F3FF} /* Ice */ 
-        .text-purple {color: #7B1842} /* Wine red */ 
-        
-        /* https://www.shopify.com/partners/blog/93130630-10-beautiful-ecommerce-website-color-schemes
-        Fjallraven*/
-        
-        .card-header {margin-bottom: 1rem}
-        #dataTable_info {margin: 1rem}
-        .card {border-width: 5px}
-        .nodecor:hover {text-decoration: none}
-        #dataTable_info {margin: 1rem}
-        { text-decoration: none !important}
-        @media screen and (min-width:767px){.narrow-results{display:block}}
-        @media screen and (max-width:766px){.narrow-results{display:none}}
-        
-        
-        /* https://picsum.photos/200/300?image=24 */
-        
-        body {
-  background: url('https://unsplash.it/1900/1080?blur&image=24') no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-        
-}
-        
-
-    </style>   
-    <!-- END OF CUSTOM CSS--> 
+      
+      <link href="sticky-footer.css" rel="stylesheet">
+      <link href="custom.css" rel="stylesheet">
     
 </head>
       
 <body>
+    
+<!-- NAV-->
   
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 mr-auto">
+        <div class = "container">
 
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
-            <div class = "container">
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-            
-                  <li class="nav-item active">
-                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                  </li>
-          
+                    <li class="nav-item active">
+                        <a class="nav-link" href=""><i class="indicator fa fa-university" aria-hidden="true"></i></a> 
+                    </li>
+                    <!--li class="nav-item active">
+                        <a class="nav-link" href=""> Home <span class="sr-only">(current)</span></a>
+                    </li-->
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="search-schools">Search Schools</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="search-schools">Search Schools</a>
+                    <a class="nav-link" href="">Login</a>
                   </li>
-
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Register</a>
+                  </li>
                 </ul>
             </div>
-                 </div> 
-            
-        </nav>
-        
-  
-     
+        </div> 
+    </nav>
     
- 
-
-   
-    <div class="container py-3">
+<!--END NAV-->
         
-            
-
-            
-        <h1 class="text-purple">
+    <div class="container py-3">
+          
+        <h1 class="text-wine-red">
             <i class="indicator fa fa-university" aria-hidden="true"></i>
             Harkness Review
         </h1>
             <div class = "lead">
-            <h2 class="text-muted">Find schools that fit the needs of your family.</h2>  
+            <h2 class="text-dark">Find schools that fit the needs of your family.</h2>  
             </div>
-        
-        
-        
-      
-       
-      
-        
-        <div class = "card-deck mt-4 mb-0">  
-    
- 
-        
-      
-        
+            
+        <div class = "card-deck mt-4 mb-0">        
     
   <div class="card mb-2">
-    <div class="card-header mb-0  bg-royalblue" role="tab" id="headingOne">
+    <div class="card-header mb-0  bg-ice-blue" role="tab" id="headingOne">
       <h5 class="mb-0">
         <a class = "nodecor collapsed text-muted" data-toggle="collapse" href="#collapseOne" ><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
-          Boarding / Day
+          <i class="indicator fa fa-university" aria-hidden="true"></i> School Type
         </a>
       </h5>
     </div>
@@ -143,14 +101,14 @@
 								</div>
 						
 								<div class="checkbox ml-3 mt-2" >
-									<label>
+									<label class="text-muted">
 										<input type="checkbox" value="" disabled>
 										Private Day 
 									</label>
 								</div>
 					
 								<div class="checkbox ml-3 mt-2"  >
-									<label>
+									<label class="text-muted">
 										<input type="checkbox" value="" disabled>
 										Public Schools
 									</label>
@@ -165,10 +123,10 @@
         <div class="col"-->
    <div class="w-100 d-md-none d-lg-none d-xl-none d-"></div>   
   <div class="card mb-2">
-    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingTwo">
+    <div class="card-header mb-0 bg-ice-blue" role="tab" id="headingTwo">
       <h5 class="mb-0">
         <a class="nodecor collapsed text-muted" data-toggle="collapse" href="#collapseTwo"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
-          Type of school
+          <i class="indicator fa fa-venus-mars" aria-hidden="true"></i> Coeducational
         </a>
       </h5>
     </div>
@@ -178,21 +136,21 @@
           <div class="checkbox ml-3 mt-2">
 									<label>
 										<input type="checkbox" value="">
-										Coed
+										Yes
 									</label>
 								</div>
 						
 								<div class="checkbox ml-3 mt-2" >
 									<label>
 										<input type="checkbox" value="">
-										Girls
+										No - All Girls
 									</label>
 								</div>
 					
 								<div class="checkbox ml-3 mt-2"  >
 									<label>
 										<input type="checkbox" value="">
-										Boys
+										No - All Boys
 									</label>
 								</div>
         
@@ -204,10 +162,10 @@
         <div class="col"-->
   <div class="w-100 d-lg-none d-xl-none"></div>          
   <div class="card mb-2">
-    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingThree">
+    <div class="card-header mb-0 bg-ice-blue" role="tab" id="headingThree">
       <h5 class="mb-0">
         <a class="nodecor collapsed text-muted" data-toggle="collapse" href="#collapseThree"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
-          Location
+          <i class="indicator fa fa-thumb-tack" aria-hidden="true"></i> Location
         </a>
       </h5>
     </div>
@@ -232,34 +190,26 @@
 								<div class="checkbox ml-3 mt-2"  >
 									<label>
 										<input type="checkbox" value="">
-										Other locations
+										Other U.S. Locations
 									</label>
 								</div>
      
       </div>
     </div>
   </div>
-
-            
-            
-            
-            
-            
-            
             
     <div class="w-100 d-md-none d-lg-none d-xl-none"></div>           
   <div class="card mb-2">
-    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingThree">
+    <div class="card-header mb-0 bg-ice-blue" role="tab" id="headingThree">
       <h5 class="mb-0">
         <a class="nodecor collapsed text-muted" data-toggle="collapse" href="#collapseFour"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
-          School size
+          <i class="indicator fa fa-user" aria-hidden="true"></i> Enrollment
         </a>
       </h5>
     </div>
     <div id="collapseFour" class="narrow-results collapse" role="tabpanel">
       <div class="card-block">
-          
-          
+               
           <div class="checkbox ml-3 mt-2">
 									<label>
 										<input type="checkbox" value="">
@@ -284,14 +234,14 @@
       </div>
     </div>
   </div>
-<!/div-->
+
         
          </div>   
-              <!--/div-->
+            
                         
                         
       
-                     <button onclick="myFunction()" type="button" class="btn bg-purple text-white mt-2 mb-2 btn-lg btn-block"><i class="fa fa-search"></i> Search for schools</button> 
+                     <button onclick="myFunction()" type="button" class="btn bg-ice-blue mt-2 mb-2 btn-lg btn-block text-dark font-weight-bold"><i class="fa fa-search"></i> Search for schools</button> 
         
         <script>
 function myFunction() {
@@ -301,28 +251,19 @@ function myFunction() {
 }
 </script>
     
-        
- 
-          <!-- Footer --> 
-    <div class="container"> 
-        <footer class="blog-footer">
-            <p>
-            &copy; 2017 The Harkness Review
-            </p>
-      </footer>
-      </div>
-    
-    
-
-   </div>
-         
-    
-        
-       
           
-        
+  </div>       
 
 </body>
     
+<div class = "container">
+    
+    <footer class="footer">
+   
+        <span class="text-muted">&copy; 2017 Harkness Review</span>
+      
+    </footer>
+    
+</div> 
     
 </html>
