@@ -1,0 +1,38 @@
+/* Sticky footer styles
+-------------------------------------------------- */        
+
+.bg-wine-red {background-color: #7B1842} 
+.bg-ice-blue {background-color: #E7F3FF}
+.bg-forest-green {background-color: #1F5846} 
+.bg-olive-green {background-color: #888551}
+.bg-orange {background-color:#D07118}
+.bg-bright-pink {background-color: #C66C98} 
+
+.text-wine-red {color: #7B1842}
+.text-ice-blue {color: #E7F3FF}
+.text-forest-green {color: #1F5846} 
+.text-olive-green {color: #888551}
+.text-orange {color:#D07118}
+.text-bright-pink {color: #C66C98} 
+
+/* https://www.shopify.com/partners/blog/93130630-10-beautiful-ecommerce-website-color-schemes
+Fjallraven*/
+
+.card-header {margin-bottom: 1rem}
+#dataTable_info {margin: 1rem}
+.card {border-width: 5px}
+.nodecor:hover {text-decoration: none}
+#dataTable_info {margin: 1rem}
+{ text-decoration: none !important}
+@media screen and (min-width:767px){.narrow-results{display:block}}
+@media screen and (max-width:766px){.narrow-results{display:none}}
+        
+        
+body {
+  background: url('https://unsplash.it/1900/1080?blur&image=24') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+        
+}
