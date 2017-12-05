@@ -29,12 +29,17 @@
     <style>
     
         .bg-purple {background-color: #7B1842} 
-        .bg-royalblue {background-color: #E7F3FF}  
-        .text-purple {color: #7B1842} /* Tyrian Purple */ 
+        .bg-royalblue {background-color: #E7F3FF} /* Ice */ 
+        .text-purple {color: #7B1842} /* Wine red */ 
+        
+        /* https://www.shopify.com/partners/blog/93130630-10-beautiful-ecommerce-website-color-schemes
+        Fjallraven*/
+        
         .card-header {margin-bottom: 1rem}
         #dataTable_info {margin: 1rem}
         .card {border-width: 5px}
         .nodecor:hover {text-decoration: none}
+        #dataTable_info {margin: 1rem}
         { text-decoration: none !important}
         @media screen and (min-width:767px){.narrow-results{display:block}}
         @media screen and (max-width:766px){.narrow-results{display:none}}
@@ -59,12 +64,12 @@
                 <ul class="navbar-nav mr-auto">
             
                   <li class="nav-item active">
-                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                   </li>
           
 
                   <li class="nav-item">
-                    <a class="nav-link" href="datatable-test2.html">Search Schools</a>
+                    <a class="nav-link" href="search-schools.html">Search Schools</a>
                   </li>
 
                 </ul>
@@ -278,7 +283,9 @@
         
         <script>
 function myFunction() {
-    alert("Search functionality is coming soon!");
+    var url = document.URL, 
+    shortUrl=url.substring(0,url.lastIndexOf("/"));
+    window.location = shortUrl + "/search-schools.html";  
 }
 </script>
     
