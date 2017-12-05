@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- FONTS (NEEDED FOR SEARCH ICON) -->
+    <script src="https://use.fontawesome.com/54c0074763.js"></script>
+    
+    <!-- BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <!-- JQUERY JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <!-- POPPER JS (BOOTSTRAP DEPENDENCY) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS-->      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    
+    <!-- DATATABLES JS (MUST BE LOADED AFTER JQUERY--> 
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- CUSTOM CSS--> 
+    <style>
+    
+     <!-- CUSTOM CSS--> 
+    <style>
+    
+        .bg-purple {background-color: #7B1842} 
+        .bg-royalblue {background-color: #E7F3FF} /* Ice */ 
+        .text-purple {color: #7B1842} /* Wine red */ 
+        
+        /* https://www.shopify.com/partners/blog/93130630-10-beautiful-ecommerce-website-color-schemes
+        Fjallraven*/
+        
+        .card-header {margin-bottom: 1rem}
+        #dataTable_info {margin: 1rem}
+        .card {border-width: 5px}
+        .nodecor:hover {text-decoration: none}
+        #dataTable_info {margin: 1rem}
+        { text-decoration: none !important}
+        @media screen and (min-width:767px){.narrow-results{display:block}}
+        @media screen and (max-width:766px){.narrow-results{display:none}}
+        
+
+    </style>   
+    <!-- END OF CUSTOM CSS--> 
+        
+     
+
+        
+ 
+    
+</head>
+      
+<body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+            <div class = "container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+            
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+          
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="search-schools.html">Search Schools</a>
+                  </li>
+
+                </ul>
+            </div>
+                 </div> 
+            
+        </nav>
+    
+    
+    <div class="container">
+            <div class = "card-deck mt-4 mb-0">  
+    
+ 
+        
+      
+        
+    
+  <div class="card mb-2">
+    <div class="card-header mb-0  bg-royalblue" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a class = "nodecor collapsed text-muted" data-toggle="collapse" href="#collapseOne" ><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
+          Boarding / Day
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="narrow-results collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+          
+    
+								<div class="checkbox ml-3 mt-2">
+									<label>
+										<input type="checkbox" value=""  checked disabled>
+										Private Boarding 
+									</label>
+								</div>
+						
+								<div class="checkbox ml-3 mt-2" >
+									<label>
+										<input type="checkbox" value="" disabled>
+										Private Day 
+									</label>
+								</div>
+					
+								<div class="checkbox ml-3 mt-2"  >
+									<label>
+										<input type="checkbox" value="" disabled>
+										Public Schools
+									</label>
+								</div>
+		
+          
+      </div>
+    </div>
+  </div>
+      
+      <!--/div>
+        <div class="col"-->
+   <div class="w-100 d-md-none d-lg-none d-xl-none d-"></div>   
+  <div class="card mb-2">
+    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="nodecor collapsed text-muted" data-toggle="collapse" href="#collapseTwo"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
+          Type of school
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="narrow-results collapse" role="tabpanel">
+      <div class="card-block">
+          
+          <div class="checkbox ml-3 mt-2">
+									<label>
+										<input type="checkbox" value="">
+										Coed
+									</label>
+								</div>
+						
+								<div class="checkbox ml-3 mt-2" >
+									<label>
+										<input type="checkbox" value="">
+										Girls
+									</label>
+								</div>
+					
+								<div class="checkbox ml-3 mt-2"  >
+									<label>
+										<input type="checkbox" value="">
+										Boys
+									</label>
+								</div>
+        
+      </div>
+    </div>
+  </div>
+            
+              <!--/div>
+        <div class="col"-->
+  <div class="w-100 d-lg-none d-xl-none"></div>          
+  <div class="card mb-2">
+    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="nodecor collapsed text-muted" data-toggle="collapse" href="#collapseThree"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
+          Location
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="narrow-results collapse" role="tabpanel">
+      <div class="card-block">
+          
+          
+          <div class="checkbox ml-3 mt-2">
+									<label>
+										<input type="checkbox" value="">
+										North-East U.S.
+									</label>
+								</div>
+						
+								<div class="checkbox ml-3 mt-2" >
+									<label>
+										<input type="checkbox" value="">
+										West Coast U.S.
+									</label>
+								</div>
+					
+								<div class="checkbox ml-3 mt-2"  >
+									<label>
+										<input type="checkbox" value="">
+										Other locations
+									</label>
+								</div>
+     
+      </div>
+    </div>
+  </div>
+
+            
+            
+            
+            
+            
+            
+            
+    <div class="w-100 d-md-none d-lg-none d-xl-none"></div>           
+  <div class="card mb-2">
+    <div class="card-header mb-0 bg-royalblue" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="nodecor collapsed text-muted" data-toggle="collapse" href="#collapseFour"><i class="indicator fa fa-caret-down d-md-none d-lg-none d-xl-none" aria-hidden="true"></i>
+          School size
+        </a>
+      </h5>
+    </div>
+    <div id="collapseFour" class="narrow-results collapse" role="tabpanel">
+      <div class="card-block">
+          
+          
+          <div class="checkbox ml-3 mt-2">
+									<label>
+										<input type="checkbox" value="">
+										Small
+									</label>
+								</div>
+						
+								<div class="checkbox ml-3 mt-2" >
+									<label>
+										<input type="checkbox" value="">
+										Medium
+									</label>
+								</div>
+					
+								<div class="checkbox ml-3 mt-2"  >
+									<label>
+										<input type="checkbox" value="">
+										Large
+									</label>
+								</div>
+     
+      </div>
+    </div>
+  </div>
+<!/div-->
+        
+         </div>
+    </div>
+    
+    
+    
+    
+    
+        
+    
+    <div class="container">
+
+      
+            
+          <div class="table-responsive table-striped">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr class = "table-info">
+                  <th>School</th>
+                  <th>State</th>
+                  <th>Coed</th>
+                  <th>Religion</th>
+                  <th>Enrollment</th>
+                  <th>Boarding Percent</th>
+                </tr>
+              </thead>
+        
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        
+        
+        </div>
+        <div class="card-footer small text-muted">Sources: xxx</div>
+    
+    
+    
+    
+
+    
+    <script>
+            
+        
+
+        
+          $("#dataTable").dataTable({
+          "data":[
+            ["Asheville School","NC","Coed","None","290","73%"],
+            ["Avon Old Farms School","CT","Boys","None","405","75%"],
+            ["Baylor School","TN","Coed","None","1053","18%"],
+            ["Berkshire School","MA","Coed","None","397","92%"],
+            ["Blair Academy","NJ","Coed","Presbyterian","462","78%"],
+            ["Brewster Academy","NH","Coed","None","352","81%"],
+            ["Brooks School","MA","Coed","None","378","65%"],
+            ["Cate School","CA","Coed","None","280","80%"],
+            ["Cheshire Academy","CT","Coed","None","437","59%"],
+            ["Choate Rosemary Hall","CT","Coed","None","862","74%"],
+            ["Concord Academy","MA","Coed","None","381","42%"],
+            ["Cranbrook Schools","MI","Coed","None","814","31%"],
+            ["Culver Academies","IN","Coed","None","814","92%"]
+          ],
+              "paging": false,
+              "dom":'<"top"l>rt<"bottom"ip><"clear">'
+        }); 
+        
+        $(document).ready(() => {
+            const $dataTable1 = $('#dataTable')
+            $dataTable1.show()
+        });
+        
+        
+        oTable = $('#dataTable').DataTable();   
+        $('#myInputTextField').keyup(function(){
+      oTable.search($(this).val()).draw() ;
+        })
+
+        
+        
+    </script>  
+    
+ 
+          <!-- Footer --> 
+    <div class="container"> 
+        <footer class="blog-footer">
+            <p>
+            &copy; 2017 The Harkness Review
+            </p>
+      </footer>
+      </div>
+    
+    
+
+   
+       
+
+</body>
+    
+    
+</html>
