@@ -8,6 +8,9 @@
 .bg-orange {background-color:#D07118}
 .bg-bright-pink {background-color: #C66C98} 
 
+.border-wine-red{border-color:#7B1842}
+.border-ice-blue{border-color:#E7F3FF}
+
 .text-wine-red {color: #7B1842}
 .text-ice-blue {color: #E7F3FF}
 .text-forest-green {color: #1F5846} 
@@ -29,10 +32,34 @@ Fjallraven*/
         
         
 body {
-  background: url('https://unsplash.it/1900/1080?blur&image=24') no-repeat center center scroll;
+  background: url('https://unsplash.it/1900/1080?image=24') no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
         
 }
+
+.fancy-checkbox input[type="checkbox"] {
+    display: none;
+}
+ 
+.fancy-checkbox span:before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    width: 1em;
+    height: 1em;
+    content: '\f10c';
+    margin-right: .3em;
+}
+ 
+.fancy-checkbox input[type="checkbox"]:checked ~ span:before {
+    content: '\f05d';
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.btn {border-width: 5px}
