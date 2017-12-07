@@ -28,6 +28,7 @@ Fjallraven*/
 #dataTable_info {margin: 1rem}
 .card {border-width: 5px}
 .nodecor:hover {text-decoration: none}
+
 #dataTable_info {margin: 1rem}
 { text-decoration: none !important}
 @media screen and (min-width:767px){.narrow-results{display:block}}
@@ -68,5 +69,12 @@ ul {
 .btn {border-width: 5px}
 
 .row:not(:last-child){border-bottom:1px solid #ccc}
-.col-md-2:not(:last-child){border-right:1px solid #ccc}
+/* .col-md-4:not(:last-child){border-right:1px solid #ccc} */
 
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.list-group a {color: #000 !important}
+.list-group a:hover {color: #7B1842 !important; background-color: #E7F3FF !important;}
