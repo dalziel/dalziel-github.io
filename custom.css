@@ -66,3 +66,7 @@ ul {
 }
 
 .btn {border-width: 5px}
+
+.row:not(:last-child){border-bottom:1px solid #ccc}
+.col-md-2:not(:last-child){border-right:1px solid #ccc}
+
